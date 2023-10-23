@@ -1,0 +1,8 @@
+demo:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: 192.168.58.128
+    port: 3306
+    database: yuan_01
+    username: root
+    password: 123456

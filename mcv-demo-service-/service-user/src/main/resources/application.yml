@@ -1,0 +1,30 @@
+server:
+  port: 7573
+spring:
+  profiles:
+    active: dev
+  main:
+      allow-circular-references: true
+  datasource:
+      driver-class-name: ${demo.datasource.driver-class-name}
+      url: jdbc:mysql://${demo.datasource.host}:${demo.datasource.port}/${demo.datasource.database}
+      username: ${demo.datasource.username}
+      password: ${demo.datasource.password}
+  application:
+    name: serviceuser
+  cloud:
+    nacos:
+      server-addr: 192.168.1.34:8848
+
+mybatis:
+  #tuo fen
+  configuration:
+    map-underscore-to-camel-case: true
+demo:
+  jwt:
+    #mi shi
+    admin-secret-key: itcast
+    #ming cheng
+    admin-token-name: token
+    #guo qi time
+    admin-ttl: 7200000

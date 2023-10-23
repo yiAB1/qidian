@@ -1,0 +1,15 @@
+server:
+  port: 7577
+spring:
+  main:
+      allow-circular-references: true
+  cloud:
+    nacos:
+       server-addr: 192.168.1.34:8848
+    gateway:
+      routes:
+        - id: service-user
+          uri: lb://serviceuser
+          predicates:
+            - Path=/emps/**
+

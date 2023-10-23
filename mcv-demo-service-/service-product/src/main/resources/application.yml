@@ -1,0 +1,23 @@
+server:
+  port: 7575
+spring:
+  profiles:
+    active: dev
+  main:
+      allow-circular-references: true
+  datasource:
+      driver-class-name: ${demo.datasource.driver-class-name}
+      url: jdbc:mysql://${demo.datasource.host}:${demo.datasource.port}/${demo.datasource.database}
+      username: ${demo.datasource.username}
+      password: ${demo.datasource.password}
+  application:
+    name: serviceuser
+  cloud:
+    nacos:
+      server-addr: 192.168.1.34:8848
+
+mybatis:
+  #tuo fen
+  configuration:
+    map-underscore-to-camel-case: true
+
